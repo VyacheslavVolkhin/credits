@@ -12,7 +12,7 @@
 
 
 		<!-- new content -->
-		
+
 
 		<!--main-section-plan-box-->
 		<div class="main-section-plan-box cnt-section">
@@ -21,13 +21,20 @@
 					<h2 class="h4-title">Choose your plan</h2>
 				</div>
 				<div class="box-inner-wrap">
+					<div class="tabs-inner-wrap">
+						<ul class="menu">
+							<li><a href="" class="active" onclick="this.closest('.main-section-plan-box').classList.remove('premium-active');this.closest('.menu').querySelector('.active').classList.remove('active');this.classList.add('active');return false;">Standard</a></li>
+							<li><a href="" onclick="this.closest('.main-section-plan-box').classList.add('premium-active');this.closest('.menu').querySelector('.active').classList.remove('active');this.classList.add('active');return false;"">Premium</a></li>
+						</ul>
+					</div>
 					<div class="items-inner-wrap">
 						<div class="items-wrap">
 							<!--item wrap-->
-							<div class="item-wrap">
+							<div class="item-wrap wrap-standart">
 								<div class="item-tile-plan">
 									<div class="tile-title-wrap">
 										<div class="tile-title">Standard </div>
+										<div class="tile-subtitle">Pay for what you use</div>
 									</div>
 									<div class="tile-info-wrap">
 										<div class="tile-info">All you need for with the lowest fees on the market.</div>
@@ -48,12 +55,12 @@
 							</div>
 							<!--/item wrap-->
 							<!--item wrap-->
-							<div class="item-wrap">
+							<div class="item-wrap wrap-premium">
 								<div class="item-tile-plan tile-att">
 									<div class="tile-title-wrap">
 										<div class="tile-title-sticker">Most Popular</div>
-										<div class="tile-title title-large">Premium </div>
-										<div class="tile-price"> €4.99 <span class="price-unit">/month</span></div>
+										<div class="tile-title">Premium </div>
+										<div class="tile-price"> <span class="title-gradient">€4.99</span> <span class="price-unit">/month</span></div>
 									</div>
 									<div class="tile-info-wrap">
 										<div class="tile-info">Average customer saves min <b>10€ per month</b>, due to lower fees.</div>
@@ -96,9 +103,26 @@
 					<div class="tbl-outer-wrap">
 						<div class="tbl-inner-wrap">
 							<table>
+								<col class="col01">
+								<col class="col02">
+								<col class="col03">
 								<tbody>
+									<tr class="tr-header">
+										<td colspan="2">Название раздела</td>
+									</tr>
 									<tr>
-										<td>Mastercard debit card</td>
+										<td>
+											Mastercard debit card
+											<div class="tile-help js-help">
+												<div class="help-ico"></div>
+												<div class="tile-help-content-wrap text-body-main">
+													<a href="" class="btn-action-ico ico-close-main js-help-close"></a>
+													<div class="h6-title">For Proof reading</div>
+													<p>Comment text comment text comment text Comment text comment text <a href="">link to site.com</a></p>
+													<p>Comment text comment text comment text Comment text comment text comment text </p>
+												</div>
+											</div>
+										</td>
 										<td>€5.0/month</td>
 										<td><b>FREE</b></td>
 									</tr>
@@ -108,7 +132,7 @@
 										<td><b>FREE</b></td>
 									</tr>
 									<tr class="tr-header">
-										<td colspan="3">Название раздела</td>
+										<td colspan="2">Название раздела</td>
 									</tr>
 									<tr>
 										<td>Crypto wallet</td>
@@ -131,7 +155,7 @@
 										<td><b>25% Off</b></td>
 									</tr>
 									<tr class="tr-header">
-										<td colspan="3">Название раздела</td>
+										<td colspan="2">Название раздела</td>
 									</tr>
 									<tr>
 										<td>Withdrawal options</td>
@@ -144,7 +168,7 @@
 										<td><b>25% Off</b></td>
 									</tr>
 									<tr class="tr-header">
-										<td colspan="3">Название раздела</td>
+										<td colspan="2">Название раздела</td>
 									</tr>
 									<tr>
 										<td>
@@ -190,7 +214,7 @@
 						</div>
 					</div>
 					<div class="more-wrap">
-						<a href="" class="btn button-border">Compare all fees and limits</a>
+						<a href="" class="btn button-border">Get started</a>
 					</div>
 				</div>
 			</div>
