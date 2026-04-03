@@ -141,6 +141,7 @@
   letter-spacing: -0.02em;
   text-align: center;
   z-index: 2;
+  overflow: visible;
   color: #151516;
   display: -ms-flexbox;
   display: flex;
