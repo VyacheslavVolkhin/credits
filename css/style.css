@@ -209,6 +209,14 @@
 .main-section-plan-box .tbl-inner-wrap {
   margin: 0 -8px;
 }
+.main-section-plan-box .tbl-inner-wrap table th:first-child .elm-help .tile-help-content-wrap,
+.main-section-plan-box .tbl-inner-wrap table td:first-child .elm-help .tile-help-content-wrap,
+.main-section-plan-box .tbl-inner-wrap table th:first-child .tile-help .tile-help-content-wrap,
+.main-section-plan-box .tbl-inner-wrap table td:first-child .tile-help .tile-help-content-wrap {
+  right: auto;
+  left: 0;
+}
+
 .main-section-plan-box .items-wrap {
   margin: 0 -8px 0 -8px;
   -ms-flex-pack: end;

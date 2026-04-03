@@ -189,7 +189,7 @@
 										<div class="tile-help js-help">
 											<div class="help-ico"></div>
 											<div class="tile-help-content-wrap text-body-main">
-												<a href="" class="btn-action-ico ico-close-main js-help-close"></a>
+												<div class="btn-action-ico ico-close-main js-help-close"></div>
 												<div class="h6-title">For Proof reading</div>
 												<p>Comment text comment text comment text Comment text comment text <a href="">link to site.com</a></p>
 												<p>Comment text comment text comment text Comment text comment text comment text </p>
@@ -215,7 +215,7 @@
 										<div class="tile-help js-help">
 											<div class="help-ico"></div>
 											<div class="tile-help-content-wrap text-body-main">
-												<a href="" class="btn-action-ico ico-close-main js-help-close"></a>
+												<div class="btn-action-ico ico-close-main js-help-close"></div>
 												<div class="h6-title">For Proof reading</div>
 												<p>Comment text comment text comment text Comment text comment text <a href="">link to site.com</a></p>
 												<p>Comment text comment text comment text Comment text comment text comment text </p>
@@ -235,7 +235,7 @@
 											<div class="tile-help js-help">
 												<div class="help-ico"></div>
 												<div class="tile-help-content-wrap text-body-main">
-													<a href="" class="btn-action-ico ico-close-main js-help-close"></a>
+													<div class="btn-action-ico ico-close-main js-help-close"></div>
 													<div class="h6-title">For Proof reading</div>
 													<p>Comment text comment text comment text Comment text comment text <a href="">link to site.com</a></p>
 													<p>Comment text comment text comment text Comment text comment text comment text </p>
@@ -251,8 +251,6 @@
 					<script>
 						
 						(function() {
-							const helpBlocks = document.querySelectorAll('.js-help');
-							
 							const closeBlock = (block) => {
 								block.classList.remove('active');
 							};
@@ -298,9 +296,13 @@
 								}
 							});
 							
-							document.querySelectorAll('.tile-help-content-wrap').forEach(content => {
-								content.addEventListener('click', (event) => {
+							document.querySelectorAll('.js-help-close').forEach(closeBtn => {
+								closeBtn.addEventListener('click', (event) => {
 									event.stopPropagation();
+									const block = closeBtn.closest('.js-help');
+									if (block) {
+										closeBlock(block);
+									}
 								});
 							});
 						})();
@@ -323,7 +325,7 @@
                                             <div class="tile-help js-help">
                                                 <div class="help-ico"></div>
                                                 <div class="tile-help-content-wrap text-body-main">
-                                                    <a href="" class="btn-action-ico ico-close-main js-help-close"></a>
+                                                    <div class="btn-action-ico ico-close-main js-help-close"></div>
                                                     <div class="h6-title">For Proof reading</div>
                                                     <p>Comment text comment text comment text Comment text comment text <a href="">link to site.com</a></p>
                                                     <p>Comment text comment text comment text Comment text comment text comment text </p>
